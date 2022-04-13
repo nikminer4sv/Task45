@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #A2D5AB;
+}
+
+.card-title{
+    letter-spacing: 10px;
+    text-shadow: 
+		-0   -1px 0   #000000,
+		 0   -1px 0   #000000,
+		-0    1px 0   #000000,
+		 0    1px 0   #000000,
+		-1px -0   0   #000000,
+		 1px -0   0   #000000,
+		-1px  0   0   #000000,
+		 1px  0   0   #000000,
+		-1px -1px 0   #000000,
+		 1px -1px 0   #000000,
+		-1px  1px 0   #000000,
+		 1px  1px 0   #000000,
+		-1px -1px 0   #000000,
+		 1px -1px 0   #000000,
+		-1px  1px 0   #000000,
+		 1px  1px 0   #000000;
+}
+
+.card {
+    font-weight: 500;
+    position: absolute;
+    color: white;
+    background-color: #4CA95D;
+    -webkit-box-shadow: 11px 11px 15px 8px rgba(34, 60, 80, 0.3); 
+    -moz-box-shadow: 11px 11px 15px 8px rgba(34, 60, 80, 0.3); 
+    box-shadow: 11px 11px 15px 8px rgba(34, 60, 80, 0.3);
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.card h1 {
+    font-weight: 900 !important;
+    font-size: 56px !important;
+}
+
+.card input {
+    border-color: #11373C;
+    border-width: 1px;
+    box-shadow: none !important;
+}
+
+.card input:focus {
+    border-color: #11373C;
+}
+
+.card button {
+    font-weight: 700;
+    transition: 0.3s;
+    font-size: 24px;
+    box-sizing: border-box;
+    background-color: #33713E;
+    border: 1px solid #11373C; 
+}
+
+.card button:hover {
+    transition: 0.5s ease-in-out, 0.5s ease-in-out;
+    letter-spacing: 6px;
+    background-color: #285830;
+    border-color: #11373C;
+}
+
+@media (max-width: 576px) {
+
+    .card h1 {
+        font-size: 34px !important;
+    }
+
+}
+
+ul {
+    list-style: none !important;
+}

@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject UserManager<User> UserManager
+
+@{
+    ViewData["Title"] = "Feed";
+    var data = ViewBag.Context as ApplicationContext;
+    User user = UserManager.Users.FirstOrDefault(u => u.Email == User.Identity.Name);
+}
+
+<div class="container pt-1">
+
+    <h1 class="bg-dark text-light text-center" style="background: #33713E !important">INFO</h1>
+
+    <div class="card mb-1">
+        <div class="card-body">
+            <h2 class="card-text">Name: @user.Name</h2>
+            <h2 class="card-text">Surname: @user.Surname</h2>
+            <h2 class="card-text">Email: @user.Email</h2>
+            <h2 class="card-text">Register date: @user.RegisterDate</h2>
+        </div>
+    </div>
+
+    <h1 class="bg-dark text-light text-center" style="background: #33713E !important">MESSAGES</h1>
+
+    <div id="messages">
+
+    </div>
+
+
+    </div>
+
+    <script src="~/js/Messages.js"></script>

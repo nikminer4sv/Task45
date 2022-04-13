@@ -1,0 +1,20 @@
+﻿@model Task45.ViewModels.MessageViewModel
+
+@{
+    ViewData["Title"] = "Send message";
+}
+
+<div class="container">
+
+    <form asp-controller="Home" asp-action="SendMessage" method="POST">
+        <h1 class="card-title text-center mt-5 mb-4">SEND MESSAGE</h1>
+        <span asp-validation-for="Recipient"></span>
+        <input type="email" class="form-control mb-4" asp-for="Recipient" placeholder="Recipient">
+        <span asp-validation-for="Theme"></span>
+        <input type="text" class="form-control mb-4" asp-for="Theme" placeholder="Theme">
+        <span asp-validation-for="Text"></span>
+        <textarea class="form-control rounded-0" rows="20" asp-for="Text" placeholder="Content..."></textarea>
+        <button type="submit" class="btn btn-primary w-100 p-2 mb-2">SEND</button>
+    </form>
+
+</div>

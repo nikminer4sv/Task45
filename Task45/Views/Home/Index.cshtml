@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+<div class="container">
+    <div class="users">
+        <div class="control p-2 outline">
+            <input type="checkbox" class="float-start mt-4" id="main-checkbox" onclick="activateAllCheckboxes()">
+            <a href="#" class="btn btn-primary float-end" onclick="blockCheckedUsers()">BLOCK</a>
+            <a href="#" class="btn btn-primary float-end" onclick="unblockCheckedUsers()">UNBLOCK</a>
+            <a class="btn btn-primary float-end" onclick="deleteCheckedUsers()">DELETE</a>
+            
+            <div class="clearfix"></div>
+        </div>
+        <div style="display: block;overflow-x: auto; white-space: nowrap;">
+            <table class="outline w-100">
+                <tr>
+                    <th>
+
+                    </th>
+                    <th>
+
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Surname
+                    </th>
+                    <th>
+                        E-mail
+                    </th>
+                    <th>
+                        Register date
+                    </th>
+                    <th>
+                        Last login date
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                </tr>
+
+                @foreach (var user in UserManager.Users)
+                {
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="user-checkbox" name="@user.Id" />
+                        </td>
+                        <td>
+                            @if (User.Identity.Name != user.Email)
+                            {
+                                <a style="color: white;" href="./home/message?recipient=@user.Email">Send message</a>
+                            }
+                        </td>
+                        <td>
+                            @user.Name
+                        </td>
+                        <td>
+                            @user.Surname
+                        </td>
+                        <td>
+                            @user.Email
+                        </td>
+                        <td>
+                            @user.RegisterDate
+                        </td>
+                        <td>
+                            @user.LastLoginDate
+                        </td>
+                        <td>
+                            @user.Status
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/Alert.js"></script>
+<script src="~/js/Toolbar.js"></script>

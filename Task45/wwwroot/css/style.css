@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #A2D5AB;
+}
+
+.navbar {
+    background-color: #33713E !important;
+    color: white !important;
+    border-bottom: 1px solid black;
+    z-index: 999999;
+}
+.navbar-brand {
+    font-size: 28px !important;
+}
+
+.navbar-brand, .nav-link {
+    font-size: 18px;
+    color: white !important;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: rgba(255, 255, 255, 0.788) !important;
+    transition: 0.2s ease-in-out, 0.2s ease-in-out;
+}
+
+.outline {
+    text-shadow: 
+		-0   -1px 0   #000000,
+		 0   -1px 0   #000000,
+		-0    1px 0   #000000,
+		 0    1px 0   #000000,
+		-1px -0   0   #000000,
+		 1px -0   0   #000000,
+		-1px  0   0   #000000,
+		 1px  0   0   #000000,
+		-1px -1px 0   #000000,
+		 1px -1px 0   #000000,
+		-1px  1px 0   #000000,
+		 1px  1px 0   #000000,
+		-1px -1px 0   #000000,
+		 1px -1px 0   #000000,
+		-1px  1px 0   #000000,
+		 1px  1px 0   #000000;
+}
+
+.users {
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: #4CA95D;
+    color: white;
+    width: 80%;
+    height: 80%;
+}
+
+.btn {
+    margin: 4px 6px 0 4px;
+    font-weight: 700;
+    transition: 0.3s;
+    font-size: 24px;
+    box-sizing: border-box;
+    background-color: #33713E;
+    border: 1px solid #11373C; 
+}
+
+.btn:hover {
+    transition: 0.2s ease-in-out, 0.2s ease-in-out;
+    background-color: #285830;
+    border-color: #11373C;
+}
+
+th {
+    font-size: 22px;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+.control {
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+
+

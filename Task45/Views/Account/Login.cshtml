@@ -1,0 +1,52 @@
+﻿@model Task45.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login page";
+}
+
+<!--<h2>Вход в приложение</h2>
+<form method="post" asp-controller="Account" asp-action="Login"
+      asp-route-returnUrl="@Model.ReturnUrl">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Email"></label><br />
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label><br />
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="RememberMe"></label><br />
+        <input asp-for="RememberMe" />
+    </div>
+    <div>
+        <input type="submit" value="Войти" />
+    </div>
+</form>
+    -->
+
+<link rel="stylesheet" type="text/css" href="~/css/sign-base.css">
+
+<div class="container-fluid">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card" style="width: 36rem;">
+                <form class="card-body" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl" method="POST">
+                    <h1 class="card-title text-center mt-5 mb-4">LOGIN</h1>
+                    <span asp-validation-for="Email"></span>
+                    <input type="email" class="form-control mb-4" asp-for="Email" placeholder="Email">
+                    <span asp-validation-for="Password"></span>
+                    <input type="password" class="form-control mb-3" asp-for="Password" placeholder="Password">
+                    <button type="submit" class="btn btn-primary w-100 p-2 mb-2">SIGN IN</button>
+                    <div asp-validation-summary="ModelOnly" class="text-center"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
